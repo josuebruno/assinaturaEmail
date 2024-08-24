@@ -5,6 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Assinatura de E-mail</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function(event) {
+                // Modificar inicial do nome para maiúscula
+                const nameInput = document.getElementById('name');
+                let nameValue = nameInput.value;
+                nameInput.value = nameValue.charAt(0).toUpperCase() + nameValue.slice(1);
+
+                // Formatar número de telefone
+                const phoneInput = document.getElementById('phone');
+                let phoneValue = phoneInput.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
+                if (phoneValue.length === 11) {
+                    phoneInput.value = `+55 (${phoneValue.slice(0, 2)}) ${phoneValue.slice(2, 7)}-${phoneValue.slice(7)}`;
+                } else {
+                    // Caso o número não tenha o comprimento esperado, apenas formate o número limpo
+                    phoneInput.value = `+55 (${phoneValue.slice(0, 2)}) ${phoneValue.slice(2, 7)}-${phoneValue.slice(7)}`;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="container">
