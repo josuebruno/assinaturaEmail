@@ -14,6 +14,7 @@
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
         <title>Assinatura de E-mail</title>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'>
         <style>
             .signature {
                 width: 520px;
@@ -32,22 +33,39 @@
             .content {
                 position: absolute;
                 top: 50%;
-                left: 50%;
+                left: 60%; /* Ajusta para 10% à direita do centro */
                 transform: translate(-50%, -50%);
-                text-align: center;
+                text-align: left; /* Alinhar texto à esquerda */
                 color: #000; /* Cor do texto sobre a imagem */
                 font-size: 14px;
-                background-color: rgba(255, 255, 255, 0.6); /* Fundo semitransparente para melhor legibilidade */
                 padding: 10px;
+                background-color: rgba(255, 255, 255, 0.6); /* Fundo semitransparente para melhor legibilidade */
                 border-radius: 5px;
+                width: 50%; /* Ajusta a largura do conteúdo para 50% da largura da imagem */
+                box-sizing: border-box; /* Inclui padding e border na largura */
                 z-index: 1; /* Garante que o texto esteja acima da imagem */
             }
             .name {
                 font-size: 18px;
                 font-weight: bold;
             }
-            .position, .coordination, .phone, .email {
+            .position {
+                font-weight: bold; /* Negrito para o cargo */
+                font-size: 16px; /* Tamanho do texto do cargo */
                 margin: 5px 0;
+            }
+            .coordination {
+                font-size: 12px; /* Tamanho menor para Diretoria / Coordenação */
+                margin: 10px 0; /* Margem para separar do telefone e email */
+            }
+            .phone, .email {
+                font-size: 12px; /* Tamanho menor para Telefone e E-mail */
+                margin: 5px 0;
+                display: flex; /* Para alinhar o ícone e o texto */
+                align-items: center; /* Centraliza verticalmente o ícone e o texto */
+            }
+            .phone i, .email i {
+                margin-right: 5px; /* Espaçamento entre o ícone e o texto */
             }
             .email a {
                 color: #000; /* Cor do link sobre a imagem */
@@ -70,6 +88,11 @@
                 color: #fff; /* Cor do texto dos links */
                 text-decoration: none;
                 font-size: 12px; /* Tamanho do texto dos links */
+                display: flex; /* Para alinhar o ícone e o texto */
+                align-items: center; /* Centraliza verticalmente o ícone e o texto */
+            }
+            .footer-image a i {
+                margin-right: 5px; /* Espaçamento entre o ícone e o texto */
             }
         </style>
     </head>
