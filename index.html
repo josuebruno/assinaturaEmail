@@ -10,13 +10,10 @@
             const form = document.querySelector('form');
 
             form.addEventListener('submit', function(event) {
-                // Modificar inicial do nome e sobrenome para maiúscula
+                // Modificar inicial do nome para maiúscula
                 const nameInput = document.getElementById('name');
-                let nameValue = nameInput.value.trim();
-                nameInput.value = nameValue
-                    .split(' ')
-                    .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
-                    .join(' ');
+                let nameValue = nameInput.value;
+                nameInput.value = nameValue.charAt(0).toUpperCase() + nameValue.slice(1);
 
                 // Formatar número de telefone
                 const phoneInput = document.getElementById('phone');
