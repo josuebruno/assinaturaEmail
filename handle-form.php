@@ -56,7 +56,7 @@
             }
             .coordination {
                 font-size: 12px; /* Tamanho menor para Diretoria / Coordenação */
-                margin: 10px 0; /* Margem para separar do telefone e email */
+                margin: 20px 0; /* Aumenta a margem para separar do telefone e email */
             }
             .phone, .email {
                 font-size: 12px; /* Tamanho menor para Telefone e E-mail */
