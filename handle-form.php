@@ -8,6 +8,7 @@
 
     // Cria o conteúdo do arquivo HTML
     $htmlContent = "
+    
     <!DOCTYPE html>
     <html lang='pt-BR'>
     <head>
@@ -52,12 +53,12 @@
             }
             .position {
                 font-weight: bold; /* Negrito para o cargo */
-                font-size: 16px; /* Tamanho do texto do cargo */
+                font-size: 15px; /* Tamanho do texto do cargo */
                 margin: 5px 0;
             }
             .coordination {
                 font-size: 12px; /* Tamanho menor para Diretoria / Coordenação */
-                margin: 20px 0; /* Aumenta a margem para separar do telefone e email */
+                margin: 10px 0px 30px; /* Aumenta a margem para separar do telefone e email */
             }
             .phone, .email {
                 font-size: 12px; /* Tamanho menor para Telefone e E-mail */
@@ -95,6 +96,15 @@
             .footer-image a i {
                 margin-right: 5px; /* Espaçamento entre o ícone e o texto */
             }
+            .fa-phone-alt{
+                color: #03435C;
+            }
+            .fa-envelope{
+                color: #03435C;
+            }
+            .info{
+                margin-left: 10px;
+            }
         </style>
     </head>
     <body>
@@ -107,10 +117,10 @@
                     <div class='position'>$jobTitle</div>
                     <div class='coordination'>$department</div>
                     <div class='phone'>
-                        <i class='fas fa-phone-alt'></i> $phone
+                        <i class='fas fa-phone-alt '></i> <div class='info'>$phone</div>
                     </div>
                     <div class='email'>
-                        <i class='fas fa-envelope'></i> <a href='mailto:$email'>$email</a>
+                        <i class='fas fa-envelope'></i> <div class='info'><a href='mailto:$email'>$email</a></div>
                     </div>
                 </div>
             </div>
@@ -118,7 +128,7 @@
             <!-- Imagem de Rodapé -->
             <div class='footer-image'>
                 <a href='https://ipea.gov.br' target='_blank' title='Ipea'>
-                    <i class='fas fa-globe'></i> Ipea.gov.br
+                    <i class='fas fa-globe ' ></i> Ipea.gov.br
                 </a>
                 <a href='https://instagram.com/ipeaoficial' target='_blank' title='Instagram'>
                     <i class='fab fa-instagram'></i> @ipeaoficial
@@ -133,6 +143,7 @@
         </div>
     </body>
     </html>
+    
     ";
 
     // Define o nome do arquivo para download
