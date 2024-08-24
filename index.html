@@ -13,7 +13,9 @@
                 // Modificar inicial do nome para maiúscula
                 const nameInput = document.getElementById('name');
                 let nameValue = nameInput.value;
-                nameInput.value = nameValue.charAt(0).toUpperCase() + nameValue.slice(1);
+                nameInput.value = nameValue.split(' ')
+                    .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+                    .join(' ');
 
                 // Formatar número de telefone
                 const phoneInput = document.getElementById('phone');
@@ -46,7 +48,14 @@
             </div>
             <div class="form-group">
                 <label for="department">Diretoria / Coordenação:</label>
-                <input type="text" id="department" name="department" required>
+                <select id="department" name="department" required>
+                    <option value="">Selecione...</option>
+                    <option value="Diretoria A">Diretoria A</option>
+                    <option value="Diretoria B">Diretoria B</option>
+                    <option value="Coordenação X">Coordenação X</option>
+                    <option value="Coordenação Y">Coordenação Y</option>
+                    <option value="Outras">Outras</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="email">E-mail:</label>
