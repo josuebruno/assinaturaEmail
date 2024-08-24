@@ -39,7 +39,7 @@
                 color: #000; /* Cor do texto sobre a imagem */
                 font-size: 14px;
                 padding: 10px;
-                background-color: rgba(255, 255, 255, 0.6); /* Fundo semitransparente para melhor legibilidade */
+                
                 border-radius: 5px;
                 width: 50%; /* Ajusta a largura do conteúdo para 50% da largura da imagem */
                 box-sizing: border-box; /* Inclui padding e border na largura */
