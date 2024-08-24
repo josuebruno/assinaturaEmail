@@ -36,7 +36,7 @@
                 left: 60%; /* Ajusta para 10% à direita do centro */
                 transform: translate(-50%, -50%);
                 text-align: left; /* Alinhar texto à esquerda */
-                color: #000; /* Cor do texto sobre a imagem */
+                color: #03435C; /* Cor do texto sobre a imagem */
                 font-size: 14px;
                 padding: 10px;
                 
