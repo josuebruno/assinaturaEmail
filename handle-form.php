@@ -6,22 +6,6 @@
     $department = $_POST['department'];
     $email = $_POST['email'];
 
-    // Função para formatar o telefone
-    function formatPhoneNumber($phone) {
-        // Remove caracteres não numéricos, exceto o sinal de +
-        $phone = preg_replace('/[^\d\+]/', '', $phone);
-
-        // Adiciona parênteses ao DDD e formata o número
-        if (preg_match('/^\+55(\d{2}) (\d{1}) (\d{4,5}-\d{4})$/', $phone, $matches)) {
-            return "+55 ({$matches[1]}) {$matches[2]} {$matches[3]}";
-        } else {
-            return $phone; // Retorna o número sem formatação se não corresponder ao padrão
-        }
-    }
-
-    // Formata o telefone
-    $formattedPhone = formatPhoneNumber($phone);
-
     // Cria o conteúdo do arquivo HTML
     $htmlContent = "
     
@@ -133,7 +117,7 @@
                     <div class='position'>$jobTitle</div>
                     <div class='coordination'>$department</div>
                     <div class='phone'>
-                        <i class='fas fa-phone-alt '></i> <div class='info'>$formattedPhone</div>
+                        <i class='fas fa-phone-alt '></i> <div class='info'>$phone</div>
                     </div>
                     <div class='email'>
                         <i class='fas fa-envelope'></i> <div class='info'><a href='mailto:$email'>$email</a></div>
