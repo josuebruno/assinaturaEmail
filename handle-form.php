@@ -6,24 +6,6 @@
     $department = $_POST['department'];
     $email = $_POST['email'];
 
-    // Função para formatar o telefone
-    function formatPhoneNumber($phone) {
-        // Remove todos os caracteres não numéricos
-        $phone = preg_replace('/\D/', '', $phone);
-        
-        // Adiciona parênteses ao DDD e formata o número
-        if (strlen($phone) == 11) {
-            return '(' . substr($phone, 0, 2) . ') ' . substr($phone, 2, 5) . '-' . substr($phone, 7);
-        } elseif (strlen($phone) == 10) {
-            return '(' . substr($phone, 0, 2) . ') ' . substr($phone, 2, 4) . '-' . substr($phone, 6);
-        } else {
-            return $phone; // Retorna o número sem formatação se não for 10 ou 11 dígitos
-        }
-    }
-
-    // Formata o telefone
-    $formattedPhone = formatPhoneNumber($phone);
-
     // Cria o conteúdo do arquivo HTML
     $htmlContent = "
     
@@ -135,7 +117,7 @@
                     <div class='position'>$jobTitle</div>
                     <div class='coordination'>$department</div>
                     <div class='phone'>
-                        <i class='fas fa-phone-alt '></i> <div class='info'>$formattedPhone</div>
+                        <i class='fas fa-phone-alt '></i> <div class='info'>$phone</div>
                     </div>
                     <div class='email'>
                         <i class='fas fa-envelope'></i> <div class='info'><a href='mailto:$email'>$email</a></div>
