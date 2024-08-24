@@ -82,9 +82,11 @@
                     <div class='name'>$name</div>
                     <div class='position'>$jobTitle</div>
                     <div class='coordination'>$department</div>
-                    <div class='phone'>Telefone: $phone</div>
+                    <div class='phone'>
+                        <i class='fas fa-phone-alt'></i> $phone
+                    </div>
                     <div class='email'>
-                        E-mail: <a href='mailto:$email'>$email</a>
+                        <i class='fas fa-envelope'></i> <a href='mailto:$email'>$email</a>
                     </div>
                 </div>
             </div>
@@ -92,16 +94,16 @@
             <!-- Imagem de Rodapé -->
             <div class='footer-image'>
                 <a href='https://ipea.gov.br' target='_blank' title='Ipea'>
-                    Ipea.gov.br
+                    <i class='fas fa-globe'></i> Ipea.gov.br
                 </a>
                 <a href='https://instagram.com/ipeaoficial' target='_blank' title='Instagram'>
-                    @ipeaoficial
+                    <i class='fab fa-instagram'></i> @ipeaoficial
                 </a>
                 <a href='https://linkedin.com/company/ipea' target='_blank' title='LinkedIn'>
-                    @companyipea
+                    <i class='fab fa-linkedin'></i> @companyipea
                 </a>
                 <a href='https://youtube.com/user/agenciaipea' target='_blank' title='YouTube'>
-                    agenciaipea
+                    <i class='fab fa-youtube'></i> agenciaipea
                 </a>
             </div>
         </div>
