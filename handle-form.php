@@ -24,7 +24,7 @@
             .main-image {
                 width: 100%;
                 height: 158px; /* Altura da imagem principal */
-                background-image: url('img/body.jpg');
+                background-image: url('http://172.24.194.204/assinaturaEmail/img/body.jpg');
                 background-size: cover;
                 background-position: center;
                 position: relative;
@@ -56,7 +56,7 @@
             .footer-image {
                 width: 100%;
                 height: 28px; /* Altura da imagem de rodapé */
-                background-image: url('img/rodape.jpg');
+                background-image: url('http://172.24.194.204/assinaturaEmail/img/rodape.jpg');
                 background-size: cover;
                 background-position: center;
                 display: flex;
