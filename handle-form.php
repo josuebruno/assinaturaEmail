@@ -6,6 +6,24 @@
     $department = $_POST['department'];
     $email = $_POST['email'];
 
+    // Função para formatar o telefone
+    function formatPhoneNumber($phone) {
+        // Remove todos os caracteres não numéricos
+        $phone = preg_replace('/\D/', '', $phone);
+        
+        // Adiciona parênteses ao DDD e formata o número
+        if (strlen($phone) == 11) {
+            return '(' . substr($phone, 0, 2) . ') ' . substr($phone, 2, 5) . '-' . substr($phone, 7);
+        } elseif (strlen($phone) == 10) {
+            return '(' . substr($phone, 0, 2) . ') ' . substr($phone, 2, 4) . '-' . substr($phone, 6);
+        } else {
+            return $phone; // Retorna o número sem formatação se não for 10 ou 11 dígitos
+        }
+    }
+
+    // Formata o telefone
+    $phone = formatPhoneNumber($phone);
+
     // Cria o conteúdo do arquivo HTML
     $htmlContent = "
     
